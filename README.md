@@ -1,0 +1,2 @@
+# Data Science Salaries Prediction
+This project aims to predict salaries for data science positions using various machine learning algorithms. The dataset used for this project is sourced from Kaggle and contains information about job titles, locations, and salaries.
