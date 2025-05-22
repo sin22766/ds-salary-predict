@@ -208,38 +208,46 @@ name = "ds-salaries-predict"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
-    { name = "dython" },
     { name = "fastapi", extra = ["standard"] },
     { name = "loguru" },
+    { name = "pdoc" },
     { name = "python-dotenv" },
     { name = "scikit-learn" },
-    { name = "seaborn" },
 ]
 
 [package.dev-dependencies]
 dev = [
-    { name = "ds-salaries-predict" },
     { name = "ipykernel" },
+    { name = "lefthook" },
     { name = "pandas" },
+    { name = "poethepoet" },
     { name = "ruff" },
+]
+eda = [
+    { name = "dython" },
+    { name = "seaborn" },
 ]
 
 [package.metadata]
 requires-dist = [
-    { name = "dython", specifier = ">=0.7.9" },
     { name = "fastapi", extras = ["standard"], specifier = ">=0.115.12" },
     { name = "loguru", specifier = ">=0.7.3" },
+    { name = "pdoc", specifier = ">=15.0.3" },
     { name = "python-dotenv", specifier = ">=1.1.0" },
     { name = "scikit-learn", specifier = ">=1.6.1" },
-    { name = "seaborn", specifier = ">=0.13.2" },
 ]
 
 [package.metadata.requires-dev]
 dev = [
-    { name = "ds-salaries-predict", virtual = "." },
     { name = "ipykernel", specifier = ">=6.29.5" },
+    { name = "lefthook", specifier = ">=1.11.13" },
     { name = "pandas", specifier = ">=2.2.3" },
+    { name = "poethepoet", specifier = ">=0.34.0" },
     { name = "ruff", specifier = ">=0.11.10" },
+]
+eda = [
+    { name = "dython", specifier = ">=0.7.9" },
+    { name = "seaborn", specifier = ">=0.13.2" },
 ]
 
 [[package]]
@@ -591,6 +599,15 @@ wheels = [
 ]
 
 [[package]]
+name = "lefthook"
+version = "1.11.13"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/36/84/07633188c49b0bedd13851bb49f89e224bcdbaaa792dbaf26863da83931a/lefthook-1.11.13.tar.gz", hash = "sha256:5e8d2c0d99b39bca7efff99f971a41cd1c8ad5db82c087d2a54eca8203745738", size = 49479895 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/08/0f/4ac809a1a005ba393ab5fa05a0731f4b5614e47d5ec2023421df97e172db/lefthook-1.11.13-py3-none-any.whl", hash = "sha256:b868faee65329949d607189a6db5c431c61f6d7bccb477e31a9544f929d1896c", size = 49719067 },
+]
+
+[[package]]
 name = "loguru"
 version = "0.7.3"
 source = { registry = "https://pypi.org/simple" }
@@ -811,6 +828,29 @@ wheels = [
 ]
 
 [[package]]
+name = "pastel"
+version = "0.2.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/76/f1/4594f5e0fcddb6953e5b8fe00da8c317b8b41b547e2b3ae2da7512943c62/pastel-0.2.1.tar.gz", hash = "sha256:e6581ac04e973cac858828c6202c1e1e81fee1dc7de7683f3e1ffe0bfd8a573d", size = 7555 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/aa/18/a8444036c6dd65ba3624c63b734d3ba95ba63ace513078e1580590075d21/pastel-0.2.1-py2.py3-none-any.whl", hash = "sha256:4349225fcdf6c2bb34d483e523475de5bb04a5c10ef711263452cb37d7dd4364", size = 5955 },
+]
+
+[[package]]
+name = "pdoc"
+version = "15.0.3"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "jinja2" },
+    { name = "markupsafe" },
+    { name = "pygments" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/9f/e9/66ab0fc39276a1818dea6302858ec9558964d8d9f1c90dd1facfe395d216/pdoc-15.0.3.tar.gz", hash = "sha256:6482d8ebbd40185fea5e6aec2f1592f4be92e93cf6bf70b9e2a00378bbaf3252", size = 155384 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/dc/37/bc3189471c63c84e15f7dc42d4b712747e9662ffbcfacfc4b6a93e6c3bc6/pdoc-15.0.3-py3-none-any.whl", hash = "sha256:686c921ef2622f166de5f73b7241935a4ddac79c8d10dbfa43def8c1fca86550", size = 145950 },
+]
+
+[[package]]
 name = "pexpect"
 version = "4.9.0"
 source = { registry = "https://pypi.org/simple" }
@@ -870,6 +910,19 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/fe/8b/3c73abc9c759ecd3f1f7ceff6685840859e8070c4d947c93fae71f6a0bf2/platformdirs-4.3.8.tar.gz", hash = "sha256:3d512d96e16bcb959a814c9f348431070822a6496326a4be0911c40b5a74c2bc", size = 21362 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/fe/39/979e8e21520d4e47a0bbe349e2713c0aac6f3d853d0e5b34d76206c439aa/platformdirs-4.3.8-py3-none-any.whl", hash = "sha256:ff7059bb7eb1179e2685604f4aaf157cfd9535242bd23742eadc3c13542139b4", size = 18567 },
+]
+
+[[package]]
+name = "poethepoet"
+version = "0.34.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pastel" },
+    { name = "pyyaml" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/b3/f2/3853d6a9a0dac08aa680895839eeab8ec0ed63db375e1f782e623c9309b6/poethepoet-0.34.0.tar.gz", hash = "sha256:86203acce555bbfe45cb6ccac61ba8b16a5784264484195874da457ddabf5850", size = 64474 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/da/d1/61431afe22577083fcb50614bc5e5aa73aa0ab35e3fc2ae49708a59ff70b/poethepoet-0.34.0-py3-none-any.whl", hash = "sha256:c472d6f0fdb341b48d346f4ccd49779840c15b30dfd6bc6347a80d6274b5e34e", size = 85851 },
 ]
 
 [[package]]
