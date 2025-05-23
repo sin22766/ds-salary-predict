@@ -1,0 +1,5 @@
+outs:
+- md5: 47ba3a32a4f98495c6b35aafd4f190ef
+  size: 8831
+  hash: md5
+  path: iso-country-codes.csv

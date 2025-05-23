@@ -1,0 +1,5 @@
+outs:
+- md5: 6d262b9b5457d043219a4803225c0a53
+  size: 47291226
+  hash: md5
+  path: salaries_preprocessed.csv

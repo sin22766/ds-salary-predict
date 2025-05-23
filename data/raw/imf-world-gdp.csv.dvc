@@ -1,0 +1,5 @@
+outs:
+- md5: 618921e9f94c0de7e51d4a9417d6d167
+  size: 86701
+  hash: md5
+  path: imf-world-gdp.csv
