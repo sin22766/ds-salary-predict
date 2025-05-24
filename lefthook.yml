@@ -8,10 +8,12 @@ pre-commit:
     - name: Format Python files
       run: ruff format {staged_files}
       glob: "*.{py, ipynb}"
+      stage_fixed: true
     
     - name: Fix the safe issues in Python files
       run: ruff check --fix {staged_files}
       glob: "*.{py, ipynb}"
+      stage_fixed: true
     
     - name: Lint Python files for the unsafe issues
       run: ruff check {staged_files}
