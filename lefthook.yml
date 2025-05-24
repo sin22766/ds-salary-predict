@@ -1,0 +1,18 @@
+# EXAMPLE USAGE:
+#
+#   Refer for explanation to following link:
+#   https://lefthook.dev/configuration/
+#
+pre-commit:
+  jobs:
+    - name: Format Python files
+      run: ruff format {staged_files}
+      glob: "*.{py, ipynb}"
+    
+    - name: Fix the safe issues in Python files
+      run: ruff check --fix {staged_files}
+      glob: "*.{py, ipynb}"
+    
+    - name: Lint Python files for the unsafe issues
+      run: ruff check {staged_files}
+      glob: "*.{py, ipynb}"
